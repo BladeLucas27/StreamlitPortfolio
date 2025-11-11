@@ -19,13 +19,29 @@ def css():
             background-color: #4e312f;
             background-size: cover;
         }
+                
+        h1, h2, h3 {
+            color: #C18C45 !important;
+        }
 
-        h1, h2, h3, p, .stMarkdown {
+        p, .stMarkdown {
             color: #ffddab !important;
+        }
+                
+        a:link {
+            color: #FFD700 !important; /* Gold/Yellow color for unvisited links */
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #C0C0C0 !important; /* Silver/Gray color for visited links */
         }
 
         </style>
     """, unsafe_allow_html=True)
+
+
+
 css()
 
 col1, col2 = st.columns([1, 2], gap="large")
@@ -80,7 +96,7 @@ with col2:
     st.table(project_data, border="horizontal")
 
     st.subheader("Contact Me")
-    st.write("""
+    st.markdown("""
     - :material/code_blocks: **GitHub:** [BladeLucas27](https://github.com/BladeLucas27)  
     - :material/mail: **Gmail:** [raymondgtio@gmail.com](mailto:raymondgtio@gmail.com)  
     - :material/chat: **Facebook:** [Raymond Gerard Tio](https://www.facebook.com/raymondgerard.tio)
